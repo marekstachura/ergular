@@ -1,3 +1,9 @@
 erlang.mk/
 relx/
+.erlang.mk.packages.v2
+_rel/
+deps/
+ebin/
+
+
 
