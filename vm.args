@@ -1,5 +1,5 @@
 ## Name of the node
--sname erguar
+-sname ergular
 
 ## Cookie for distributed erlang
 -setcookie ergular
