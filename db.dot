@@ -1,0 +1,23 @@
+digraph DB
+{
+   graph [rankdir = "LR" ];
+   node[fontsize = "14" style=bold];
+# Tables
+   companies [label="Companies |<f0> id | name | description | <f1>id_user_creator"   shape = "record"];
+   users [label="Users |<f0> id | name | pwd | full_name"   shape = "record"];
+   company_addresses [label="Company_addresses |<f1> id_company | id | line1 | line2 | town | province | country"   shape = "record"];
+   reviews[label="Reviews | <f0>id | description" shape="record"];
+   review_company[label="Review_Company | <f1>id_company | <f2>id_review | answer" shape="record"];
+   ratings [label="<tb> Ratings | id | should there be diferent ratings?"   shape = "record"];
+
+
+# Table connections
+   company_addresses:f1 -> companies:f0;
+   companies:f1 -> users:f0;
+   review_company:f1 -> companies:f0;
+   review_company:f2 -> reviews:f0;
+
+   
+   label = "DataBase Schema";
+   fontsize=20;
+}

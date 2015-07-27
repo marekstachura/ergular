@@ -1,0 +1,19 @@
+digraph web {
+    home [label = "Home\nSearch company..."];
+    logged_home [label ="Logged Home"];
+    about [label = "About us"];
+    login [label = "Login"];
+    search[label = "Search company"];
+    singin [label = "Sing in"];
+    search2 [label ="Search company"];
+    add_review [label = "Add review"];
+    edit_review [label = "Edit review"]
+    view_reviews [label = "View  reviews"];
+
+    home -> {about login search singin};
+    {login singin} -> logged_home;
+    about -> home;
+    logged_home ->  {search2};
+    search2 -> {add_review, edit_review, view_reviews};
+    {add_review, edit_review, view_reviews} -> search2;
+}
